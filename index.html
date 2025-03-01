@@ -1,1 +1,189 @@
-<h1>Explora el Futuro del Gaming</h1>
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videojuego de Escalada - Summit Quest</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/7LqXZzG.jpg') no-repeat center center;
+      background-size: cover;
+      filter: brightness(0.6);
+      z-index: -1;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .feature-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    input[type="email"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="background-image"></div>
+    <h1>Summit Quest</h1>
+    <p>Un viaje épico hacia la cima</p>
+  </header>
+
+  <section id="about">
+    <h2>¿De qué trata Summit Quest?</h2>
+    <p>Summit Quest es un videojuego de aventuras donde los jugadores deben escalar montañas desafiantes, superar obstáculos y enfrentarse a enemigos mientras avanzan hacia la cima. Cada nivel presenta nuevos desafíos y paisajes impresionantes que te mantendrán al borde de tu asiento.</p>
+  </section>
+
+  <section id="features">
+    <h2>Características del Juego</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>Gráficos Impresionantes</h3>
+        <p>Explora montañas detalladas con gráficos realistas y efectos visuales envolventes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Jugabilidad Desafiante</h3>
+        <p>Supera niveles únicos con mecánicas innovadoras y rompecabezas estratégicos.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Modo Multijugador</h3>
+        <p>Compite contra amigos o colabora en equipo para alcanzar la cima más alta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="register">
+    <h2>¡Regístrate para ser parte de la aventura!</h2>
+    <p>Ingresa tu correo electrónico para recibir actualizaciones exclusivas sobre el lanzamiento del juego.</p>
+    <form id="interestForm">
+      <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+      <button type="submit">¡Regístrate ahora!</button>
+    </form>
+    <p id="thankYouMessage" style="display: none; color: #2ecc71;">¡Gracias por registrarte! Pronto nos pondremos en contacto contigo.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Summit Quest. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('interestForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      if (email) {
+        console.log(`Correo registrado: ${email}`);
+        document.getElementById('interestForm').reset();
+        document.getElementById('interestForm').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
+```
